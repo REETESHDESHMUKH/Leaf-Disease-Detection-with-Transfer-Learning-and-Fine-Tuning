@@ -6,58 +6,56 @@ Leaf disease detection will replace the manual method, which is time-consuming a
 This dataset contains 10 directories denoting diseases like Potato Early blight, Potato healthy etc.
 Total files : 10000 files
 Each disease : atleast 1000 files.
-Dataset should be bifurcated into 3 subsets, namely:
-**• Training [80%]:** Dataset to be used while training.
+Dataset should be bifurcated into 3 subsets, namely:<br>
+**• Training [80%]:** Dataset to be used while training.<br>
 **• Validation [10%]:** Dataset to be tested against while
-training.
+training.<br>
 **• Test [10%]:** Dataset to be tested against after we trained
-a model
+a model.<br>
 
 ## Pre-processing
 **• Auto-Tune:** helps to pick optimal part of dataset for our
-tensor flow model.
-Shuffle: [1000]
+tensor flow model.<br>
+Shuffle: [1000]<br>
 **• Resize and Rescaling:** so basically by default layer
 output float hence its necessary to resize and rescale it
-using builtin functions of keras.
-Resize: [256x256]
-Rescale: [1./255]
+using builtin functions of keras.<br>
+Resize: [256x256]<br>
+Rescale: [1./255]<br>
 **• Data augmentation:** By using data augmentation, we
-hope to improve the model’s generalizability.
-Random FLip : ”horizontal and vertical”
-Random Rotation : 20 degree.
+hope to improve the model’s generalizability.<br>
+Random FLip : ”horizontal and vertical”.<br>
+Random Rotation : 20 degree.<br>
 
 ## Results
 ### Detection
 <img width="269" alt="image" src="https://github.com/REETESHDESHMUKH/Leaf-Disease-Detection-with-Transfer-Learning-and-Fine-Tuning/assets/76653982/cfff2669-d86c-4fd7-a35c-df5f02b45a2a">
 
 ### A. Data Augmentation
-**Before :** 
+**Before :** <br>
 <img width="266" alt="image" src="https://github.com/REETESHDESHMUKH/Leaf-Disease-Detection-with-Transfer-Learning-and-Fine-Tuning/assets/76653982/87f3a781-2620-474b-ba2d-7dbe5a94553c">
 
 The accuracy after applying data augmentation comes out to
 be 98.84%. An improvement of 3.64% in accuracy can be
 observed here.
 
-**After :**
+**After :** <br>
 <img width="248" alt="image" src="https://github.com/REETESHDESHMUKH/Leaf-Disease-Detection-with-Transfer-Learning-and-Fine-Tuning/assets/76653982/f9272427-e99b-40fc-bdce-4644783fe136">
 
 ### B. Fine Tuning 
-**Before :**
+**Before :** <br>
 <img width="245" alt="image" src="https://github.com/REETESHDESHMUKH/Leaf-Disease-Detection-with-Transfer-Learning-and-Fine-Tuning/assets/76653982/3a00fefa-a879-4ace-bb05-dca43199a269">
 
 We apply fine-tuning on the model and then test it on tomato
 leaves. We were able to increase the accuracy further to
 94.12%
 
-**After :**
+**After :** <br>
 <img width="248" alt="image" src="https://github.com/REETESHDESHMUKH/Leaf-Disease-Detection-with-Transfer-Learning-and-Fine-Tuning/assets/76653982/0cb226ae-503b-41e8-a12c-1d352c01efdd">
 
 ## Conclusion
-We were successfully able to build a leaf disease detection
-system using the concepts of convolutional neural networks.
-The model was able to give an accuracy of 98.84% when
-trained on the whole data set. The transfer learning with finetuning was also successfully executed as we were able to
+We were successfully able to build a leaf disease detection system using the concepts of convolutional neural networks.The model was able to give an accuracy of 98.84% when
+trained on the whole data set.The transfer learning with fine tuning was also successfully executed as we were able to
 detect disease on tomato leaves by training the model on potato
 leaves with an accuracy of 94.12%.
 We still need to work on developing a better treatment
